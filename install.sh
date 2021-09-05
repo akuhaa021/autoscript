@@ -203,7 +203,7 @@ systemctl restart xray
 # Install WireGuard
 echo -e "deb http://ftp.debian.org/debian buster-backports main" >> /etc/apt/sources.list.d/buster-backports.list
 apt update
-apt install -y wireguard iptables resolvconf qrencode "linux-headers-$(uname -r)"
+apt install -y "linux-headers-$(uname -r)" wireguard iptables resolvconf qrencode
 server_priv_key=$(wg genkey)
 server_pub_key=$(echo "${server_priv_key}" | wg pubkey)
 echo -e "ip=${ip}
