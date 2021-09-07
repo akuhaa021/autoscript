@@ -70,7 +70,7 @@ function block-conn() {
 			echo on > /iriszz/block-status
 		elif [ $option -eq 2 ]; then
 			clear
-			echo -e "Operation cancelled"
+			echo -e "Operation cancelled."
 			echo -e ""
 			exit 0
 		fi
