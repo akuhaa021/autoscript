@@ -1,9 +1,0 @@
-[Unit]
-Description=Dropbear User-Limit Service
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/script-3
-
-[Install]
-WantedBy=multi-user.target
