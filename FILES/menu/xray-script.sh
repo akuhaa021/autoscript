@@ -68,8 +68,10 @@ function add-user() {
 	echo -e "Link : vless://$uuid@$domain:3646?security=xtls&flow=xtls-rprx-direct#XTLS-$domain"
 	echo -e "QR : https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless://$uuid@$domain:3646?security=xtls%26flow=xtls-rprx-direct%23XTLS-$domain"
 	echo -e ""
-	echo -e "Link Digi    : vless://$uuid@plus.google.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=vault21.digi.com.my#vless_xtls_Digi_$user"
-	echo -e "Link Umobile : vless://$uuid@wap.u.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=clubopen.pubgmobile.com.wap.u.com.my#vless_xtls_Umobile_$user"
+	echo -e "Link Digi 1   : vless://$uuid@plus.google.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=vault21.digi.com.my#vless_xtls_Digi_$user"
+	echo -e "Link Umobile 1: vless://$uuid@wap.u.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=clubopen.pubgmobile.com.wap.u.com.my#vless_xtls_Umobile_$user"
+	echo -e "Link Digi 2   : vless://$uuid@vault21.digi.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=vault21.digi.com.my#vless_xtls_Digi_$user"
+	echo -e "Link Umobile 2: vless://$uuid@music.u.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=clubopen.pubgmobile.com.music.u.com.my#vless_xtls_Umobile_$user"
 	
 }
 
@@ -122,10 +124,13 @@ function extend-user() {
 	echo -e "$user\t$uuid\t$exp_new" >> /donboyage/xray/xray-clients.txt
 
 	clear
-	echo -e "Xray User Information"
-	echo -e "---------------------"
+	echo -e "Success Extend Xray User Information"
+	echo -e "------------------------------------"
 	echo -e "Username : $user"
 	echo -e "Expired date : $exp"
+	echo -e "Extend : days"
+	echo -e "Server : "
+	echo -e "------------------------------------"
 	echo -e ""
 }
 
@@ -233,8 +238,10 @@ function show-config() {
 	echo -e "Link : vless://$uuid@$domain:3646?security=xtls&flow=xtls-rprx-direct#XTLS-$domain"
 	echo -e "QR : https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless://$uuid@$domain:3646?security=xtls%26flow=xtls-rprx-direct%23XTLS-$domain"
 	echo -e ""
-	echo -e "Link Digi    : vless://$uuid@plus.google.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=vault21.digi.com.my#vless_xtls_Digi_$user"
-	echo -e "Link Umobile : vless://$uuid@wap.u.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=clubopen.pubgmobile.com.wap.u.com.my#vless_xtls_Umobile_$user"
+	echo -e "Link Digi 1   : vless://$uuid@plus.google.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=vault21.digi.com.my#vless_xtls_Digi_$user"
+	echo -e "Link Umobile 1: vless://$uuid@wap.u.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=clubopen.pubgmobile.com.wap.u.com.my#vless_xtls_Umobile_$user"
+	echo -e "Link Digi 2   : vless://$uuid@vault21.digi.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=vault21.digi.com.my#vless_xtls_Digi_$user"
+	echo -e "Link Umobile 2: vless://$uuid@music.u.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=clubopen.pubgmobile.com.music.u.com.my#vless_xtls_Umobile_$user"
 }
 
 clear
