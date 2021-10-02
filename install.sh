@@ -1,15 +1,3 @@
-#!/bin/bash
-
-# Check root
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root!"
-   exit 1
-fi
-
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
-   echo "OpenVZ is not supported!"
-   exit 1
-fi
 
 # Get domain
 clear
