@@ -39,9 +39,9 @@ function add-user() {
 	echo -e "XRAY Config Information"
 	echo -e ""
 	echo -e ""
-	echo -e "Link Digi    : vless://$uuid@vault21.digi.com.my.$domain:443?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=vault21.digi.com.my#vless_xtls_Digi_$user"
+	echo -e "Link Digi    : vless://$uuid@vault21.digi.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=vault21.digi.com.my#vless_xtls_Digi_$user"
 	echo -e ""
-	echo -e "Link Umobile : vless://$uuid@music.u.com.my.$domain:443?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=clubopen.pubgmobile.com.music.u.com.my#vless_xtls_Umobile_$user"
+	echo -e "Link Umobile : vless://$uuid@music.u.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=clubopen.pubgmobile.com.music.u.com.my#vless_xtls_Umobile_$user"
 	
 }
 
@@ -94,10 +94,13 @@ function extend-user() {
 	echo -e "$user\t$uuid\t$exp_new" >> /donb/xray/xray-clients.txt
 
 	clear
-	echo -e "Xray User Information"
-	echo -e "---------------------"
+	echo -e "Success Extend Xray User Information"
+	echo -e "------------------------------------"
 	echo -e "Username : $user"
 	echo -e "Expired date : $exp"
+	echo -e "Additional day : $extend day"
+	echo -e "Server : $domain"
+	echo -e "------------------------------------"
 	echo -e ""
 }
 
@@ -203,21 +206,21 @@ function show-config() {
 	echo -e "VLESS + WebSocket + TLS"
 	echo -e "-----------------------"
 	echo -e "Host : $domain"
-	echo -e "Server Port : 443"
+	echo -e "Server Port : 3646"
 	echo -e "User ID : $uuid"
 	echo -e "Security : none"
 	echo -e "Network Type : ws"
 	echo -e "WebSocket Path : /xray"
 	echo -e "TLS : tls"
 	echo -e ""
-	echo -e "Link : vless://$uuid@$domain:443?type=ws&encryption=none&security=tls&path=%2fxray#XRAY_WS_TLS-$user"
+	echo -e "Link : vless://$uuid@$domain:3646?type=ws&encryption=none&security=tls&path=%2fxray#XRAY_WS_TLS-$user"
 	echo -e ""
-	echo -e "QR : https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless://$uuid@$domain:443?type=ws%26encryption=none%26security=tls%26path=%2fxray%23XRAY_WS_TLS-$user"
+	echo -e "QR : https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless://$uuid@$domain:3646?type=ws%26encryption=none%26security=tls%26path=%2fxray%23XRAY_WS_TLS-$user"
 	echo -e ""
 	echo -e "VLESS + TLS / XTLS"
 	echo -e "------------------"
 	echo -e "Adress: $domain"
-	echo -e "Port: 443"
+	echo -e "Port: 3646"
 	echo -e "ID: $uuid"
 	echo -e "Flow: xtls-rprx-direct"
 	echo -e "Encryption: none"
@@ -225,13 +228,13 @@ function show-config() {
 	echo -e "Header Type: none"
 	echo -e "TLS: tls / xtls"
 	echo -e ""
-	echo -e "Link : vless://$uuid@$domain:443?security=xtls&encryption=none&flow=xtls-rprx-direct#XRAY_XTLS-$user"
+	echo -e "Link : vless://$uuid@$domain:3646?security=xtls&encryption=none&flow=xtls-rprx-direct#XRAY_XTLS-$user"
 	echo -e ""
-	echo -e "QR : https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless://$uuid@$domain:443?security=xtls%26encryption=none%26flow=xtls-rprx-direct%23XRAY_XTLS-$user"
+	echo -e "QR : https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless://$uuid@$domain:3646?security=xtls%26encryption=none%26flow=xtls-rprx-direct%23XRAY_XTLS-$user"
 	echo -e ""
-	echo -e "Link Digi    : vless://$uuid@vault21.digi.com.my.$domain:443?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=vault21.digi.com.my#vless_xtls_Digi_$user"
+	echo -e "Link Digi    : vless://$uuid@vault21.digi.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=vault21.digi.com.my#vless_xtls_Digi_$user"
 	echo -e ""
-	echo -e "Link Umobile : vless://$uuid@music.u.com.my.$domain:443?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=clubopen.pubgmobile.com.music.u.com.my#vless_xtls_Umobile_$user"
+	echo -e "Link Umobile : vless://$uuid@music.u.com.my.$domain:3646?headerType=none&type=tcp&encryption=none&flow=xtls-rprx-direct&security=xtls&sni=clubopen.pubgmobile.com.music.u.com.my#vless_xtls_Umobile_$user"
 }
 
 clear
