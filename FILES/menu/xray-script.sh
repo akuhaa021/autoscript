@@ -20,7 +20,7 @@ function add-user() {
 	email=${user}@${domain}
 	echo -e "${user}\t${uuid}\t${exp}" >> /donb/xray/xray-clients.txt
 
-	cat /usr/local/etc/xray/config.json | jq '.inbounds[0].settings.clients += [{"id": "'${uuid}'","flow": "xtls-rprx-direct","email": "'${email}'"}]' > /usr/local/etc/xray/config_tmp.json
+	cat /usr/local/etc/xray/config.json | jq '.inbounds[0].settings.clients += [{"id": "'${uuid}'","flow": "xtls-rprx-splice","email": "'${email}'"}]' > /usr/local/etc/xray/config_tmp.json
 	mv -f /usr/local/etc/xray/config_tmp.json /usr/local/etc/xray/config.json
 	cat /usr/local/etc/xray/config.json | jq '.inbounds[1].settings.clients += [{"id": "'${uuid}'","email": "'${email}'"}]' > /usr/local/etc/xray/config_tmp.json
 	mv -f /usr/local/etc/xray/config_tmp.json /usr/local/etc/xray/config.json
